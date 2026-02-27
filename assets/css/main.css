@@ -771,12 +771,11 @@ section,
 --------------------------------------------------------------*/
 .hero {
   position: relative;
-  min-height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding: 100px 0;
+  padding: 100px 0 30px 0;
 }
 
 .hero::after {
@@ -804,9 +803,9 @@ section,
 }
 
 @media (max-width: 991px) {
-  .hero .content-col {
-    padding-right: 15px;
-    margin-bottom: 3rem;
+  .hero {
+    padding: 80px 0 30px 0;
+    min-height: auto;
   }
 }
 
@@ -1050,7 +1049,7 @@ section,
 }
 
 .about .about-image .experience-badge .text {
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 1px;
 }

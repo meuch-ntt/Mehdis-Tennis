@@ -707,6 +707,16 @@ h6 {
   color: color-mix(in srgb, var(--default-color), transparent 50%);
 }
 
+/* Fix: allow text selection in page title */
+.page-title::after {
+  pointer-events: none;
+}
+
+.page-title .container {
+  position: relative;
+  z-index: 2;
+}
+
 /*--------------------------------------------------------------
 # Global Sections
 --------------------------------------------------------------*/

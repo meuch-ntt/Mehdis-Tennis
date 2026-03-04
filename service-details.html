@@ -26,6 +26,86 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Pricing (simple + modern, fits template) -->
+  <style>
+    .pricing-simple .pricing-card {
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      overflow: hidden;
+    }
+
+    .pricing-simple .pricing-card .pricing-head {
+      padding: 22px 22px 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .pricing-simple .pricing-card .pricing-head h2 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .pricing-simple .pricing-card .pricing-head p {
+      margin: 8px 0 0;
+      opacity: 0.85;
+    }
+
+    .pricing-simple .pricing-list {
+      padding: 6px 22px 18px;
+      margin: 0;
+      list-style: none;
+    }
+
+    .pricing-simple .pricing-list li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .pricing-simple .pricing-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .pricing-simple .price-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+    }
+
+    .pricing-simple .price-value {
+      font-weight: 800;
+      letter-spacing: 0.2px;
+      white-space: nowrap;
+    }
+
+    .pricing-simple .pricing-foot {
+      padding: 0 22px 22px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .pricing-simple .pricing-note {
+      font-size: 0.95rem;
+      opacity: 0.85;
+      margin: 0;
+    }
+
+    @media (max-width: 575.98px) {
+      .pricing-simple .pricing-foot {
+        justify-content: flex-start;
+      }
+    }
+  </style>
 </head>
 
 <body class="service-details-page">
@@ -36,20 +116,21 @@
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <h1 class="sitename">Mehdis Tennis</h1>
       </a>
-
-      <!--
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="#service-details">Kurse</a></li>
+          <li><a href="#pricing">Preise</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-      -->
-
-      <a class="btn-getstarted" href="#about">Get Started</a>
-
+      <a class="btn-getstarted"
+        href="https://wa.me/+491794241063?text=Hallo%20Mehdi%2C%0A%0Aich%20habe%20Interesse%20am%20Tennistraining%20im%20Sommer%202026.%0A%0ASpielniveau%3A%20Ich%20spiele%20Tennis%20seit%0A-%3E%20___%20Jahren%0A%0Agew%C3%BCnschte%20Trainingsform%3A%20(Gruppentraining%20oder%20individuelles%20Training)%3F%0A-%3E%20%0A%0AZeitliche%20Verf%C3%BCgbarkeit%3A%20Wochentage%20und%20Uhrzeiten?%20(bitte%20alle%20m%C3%B6glichen%20Zeiten%20angeben)%0A-%3E%20%0A%0AIch%20freue%20mich%20auf%20Deine%20R%C3%BCckmeldung!%0A%0AViele%20Gr%C3%BC%C3%9Fe"
+        target="_blank">
+        
+        <i class="fab fa-whatsapp"></i> Jetzt Training anfragen
+      </a>
     </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </header>
 
   <main class="main">
@@ -60,10 +141,13 @@
         <h1>Anmeldung für Sommertraining 2026</h1>
         <p>
           <i class="bi bi-calendar-event me-2"></i>
-          Mo. 20.04.2026 – So. 12.07.2026
+          Mitte April bis Mitte Juli (genaue Termine werden noch bekannt gegeben)
           <br>
           <i class="bi bi-clock me-2"></i>
-          10 Trainingseinheiten à 60 Minuten wöchentlich
+          10 Trainingseinheiten à 60 Minuten
+          <br>
+          <i class="bi bi-geo-alt me-2"></i>
+          Forstenrieder Allee 256, 81476 München
         </p>
       </div>
     </div><!-- End Page Title -->
@@ -79,13 +163,14 @@
               <div class="service-header" data-aos="fade-up">
                 <h1>Kurse und wichtige Informationen</h1>
                 <div class="service-meta">
-                  <span><i class="bi bi-award"></i> Expertise</span>
-                  <span><i class="bi bi-clock"></i> Seit 2016</span>
+                  <span> 🎾 Alle Levels</span>
+                  <span><i class="bi bi-person me-1"></i> Einzel</span>
+                  <span><i class="bi bi-people me-1"></i> Gruppe (max. 4)</span>
+                  <span><i class="bi bi-calendar-check me-1"></i> Flexibel</span>
                 </div>
                 <p class="lead">
                   Wir bieten moderne Trainingskurse für alle Altersgruppen und Spielstärken – vom Einsteigerkurs bis zum intensiven Trainingsprogramm für ambitionierte Spieler.
-                  <br>Sowohl individuelles Einzeltraining als auch Gruppentraining mit maximal vier Teilnehmer*innen sind möglich. Die Trainingseinheiten können flexibel ein- bis mehrmals pro Woche gebucht werden.
-                  <br>Entdecke unser vielfältiges Kursangebot und finde das passende Training für deine Ziele.
+                  <br>Sowohl individuelles Einzeltraining als auch Gruppentraining mit maximal vier Teilnehmer*innen sind möglich. Je nach Zielsetzung findet das Training einmal wöchentlich oder mehrmals pro Woche statt.
                   <br>An den Wochen 25.05 - 31.05.2026 und 22.06 - 28.06.2026 findet kein Training statt.
                 </p>
               </div>
@@ -98,55 +183,77 @@
         <div class="row gy-5">
           <div class="col-12">
             <div class="service-tabs" data-aos="fade-up" data-aos-delay="200">
-              <ul class="nav nav-tabs" id="serviceTab" role="tablist">
+              <div class="service-tabs-mobile-nav course-tabs-mobile">
+                <!-- Scrollable Tabs -->
+                <div class="service-tabs-scroll">
 
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="kids-tab"
-                    data-bs-toggle="tab" data-bs-target="#service-details-tab-1"
-                    type="button" role="tab" aria-controls="service-details-tab-1" aria-selected="true">
-                    <i class="bi bi-info-circle"></i> Kinder/ Jugend
+                  <ul class="nav nav-tabs" id="serviceTab" role="tablist">
+
+                    <!-- Kinder / Jugend -->
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="kids-tab"
+                        data-bs-toggle="tab" data-bs-target="#service-details-tab-1"
+                        type="button" role="tab">
+                        <i class="bi bi-trophy  me-1"></i> Kinder / Jugend
+                      </button>
+                    </li>
+
+                    <!-- Erwachsene -->
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="erwachsene-tab"
+                        data-bs-toggle="tab" data-bs-target="#service-details-tab-2"
+                        type="button" role="tab">
+                        <i class="bi bi-person me-1"></i> Erwachsene
+                      </button>
+                    </li>
+
+                    <!-- Fast-Learning -->
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="fastLearning-tab"
+                        data-bs-toggle="tab" data-bs-target="#service-details-tab-3"
+                        type="button" role="tab">
+                        <i class="bi bi-lightning-charge me-1"></i> Fast-Learning
+                      </button>
+                    </li>
+
+                    <!-- Afterwork -->
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="afterwork-tab"
+                        data-bs-toggle="tab" data-bs-target="#service-details-tab-4"
+                        type="button" role="tab">
+                        <i class="bi bi-sunset me-1"></i> Afterwork
+                      </button>
+                    </li>
+
+                  </ul>
+
+                </div>
+
+                <!-- Arrow Buttons UNDER the tabs (mobile only) -->
+                <div class="course-nav-buttons d-md-none">
+                  <button class="course-scroll-prev">
+                    <i class="bi bi-arrow-left"></i>
                   </button>
-                </li>
-
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="erwachsene-tab"
-                    data-bs-toggle="tab" data-bs-target="#service-details-tab-2"
-                    type="button" role="tab" aria-controls="service-details-tab-2" aria-selected="false">
-                    <i class="bi bi-diagram-3"></i> Erwachsene
+                  <button class="course-scroll-next">
+                    <i class="bi bi-arrow-right"></i>
                   </button>
-                </li>
+                </div>
 
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="fastLearning-tab"
-                    data-bs-toggle="tab" data-bs-target="#service-details-tab-3"
-                    type="button" role="tab" aria-controls="service-details-tab-3" aria-selected="false">
-                    <i class="bi bi-graph-up-arrow"></i> Fast-Learning
-                  </button>
-                </li>
-
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="afterwork-tab"
-                    data-bs-toggle="tab" data-bs-target="#service-details-tab-4"
-                    type="button" role="tab" aria-controls="service-details-tab-4" aria-selected="false">
-                    <i class="bi bi-people"></i> Afterwork
-                  </button>
-                </li>
-
-              </ul>
+              </div>
 
               <div class="tab-content">
 
                 <!-- TAB 1 -->
                 <div class="tab-pane fade show active" id="service-details-tab-1" role="tabpanel" aria-labelledby="kids-tab">
                   <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-8">
                       <div class="content-block">
                         <h3>Kinder- und Jugendkurs Sommer 2026</h3>
                         <p>Im Kinder- und Jugendkurs steht die ganzheitliche Entwicklung im Mittelpunkt. Neben Technik und Taktik trainieren wir gezielt Koordination und Motorik – die entscheidenden Bausteine für eine nachhaltige sportliche Entwicklung.</p>
                         <p>Durch abwechslungsreiche Übungs- und Spielformen erzielen die Kinder und Jugendlichen kontinuierliche Fortschritte – verbunden mit jeder Menge Freude auf dem Platz.</p>
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                       <img src="assets/img/services/services-7.webp" alt="Kinder- und Jugendkurs" class="img-fluid rounded">
                     </div>
                   </div>
@@ -155,14 +262,14 @@
                 <!-- TAB 2 -->
                 <div class="tab-pane fade" id="service-details-tab-2" role="tabpanel" aria-labelledby="erwachsene-tab">
                   <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-8">
                       <div class="content-block">
                         <h3>Einzel- und Gruppenkurse Erwachsene Sommer 2026</h3>
                         <p>Ob Anfänger, Wiedereinsteiger oder ambitionierter Spieler – unsere Kurse bieten dir die Möglichkeit, dein Können gezielt zu verbessern.</p>
                         <p>Praxisnahe Spielformen und ein positives Trainingsklima fördern kontinuierliche Fortschritte – kombiniert mit echter Spielfreude.</p>
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                       <img src="assets/img/services/services-7.webp" alt="Erwachsenenkurse" class="img-fluid rounded">
                     </div>
                   </div>
@@ -171,14 +278,14 @@
                 <!-- TAB 3 -->
                 <div class="tab-pane fade" id="service-details-tab-3" role="tabpanel" aria-labelledby="fastLearning-tab">
                   <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-8">
                       <div class="content-block">
                         <h3>Fast-Learning Sommer 2026</h3>
                         <p>Der ideale Einstieg für Anfänger. Schritt für Schritt vermitteln wir alle grundlegenden Schlagtechniken – praxisnah und direkt im Spiel.</p>
                         <p>Nach 10 Stunden kannst du Tennis auf normaler Platzgröße spielen.</p>
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                       <img src="assets/img/services/services-7.webp" alt="Fast-Learning" class="img-fluid rounded">
                     </div>
                   </div>
@@ -187,14 +294,14 @@
                 <!-- TAB 4 -->
                 <div class="tab-pane fade" id="service-details-tab-4" role="tabpanel" aria-labelledby="afterwork-tab">
                   <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-8">
                       <div class="content-block">
                         <h3>Afterwork Tennis Sommer 2026</h3>
                         <p>Afterwork-Tennis ist der perfekte Ausgleich nach dem Arbeitstag und bietet dir gleichzeitig die Möglichkeit, dein Spiel gezielt weiterzuentwickeln.</p>
                         <p>Techniktraining, Spielformen und Konditionstraining in lockerer Atmosphäre.</p>
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                       <img src="assets/img/services/services-7.webp" alt="Afterwork Tennis" class="img-fluid rounded">
                     </div>
                   </div>
@@ -209,18 +316,75 @@
       </div>
     </section>
 
+    <!-- PRICING SECTION (LAST SECTION IN MAIN) -->
+    <section id="pricing" class="section pricing-simple">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+
+            <div class="pricing-card">
+              <div class="pricing-head">
+                <h2>Preise</h2>
+                <p>Sommertraining 2026 · 10 Trainingseinheiten à 60 Minuten</p>
+              </div>
+
+              <ul class="pricing-list">
+                <li>
+                  <div class="price-label">
+                    <i class="bi bi-person me-1"></i>
+                    <span>Einzeltraining</span>
+                  </div>
+                  <div class="price-value">700 €</div>
+                </li>
+
+                <li>
+                  <div class="price-label">
+                    <i class="bi bi-people me-1"></i>
+                    <span>2er-Gruppe</span>
+                  </div>
+                  <div class="price-value">400 €</div>
+                </li>
+
+                <li>
+                  <div class="price-label">
+                    <i class="bi bi-people-fill me-1"></i>
+                    <span>3/4er-Gruppe</span>
+                  </div>
+                  <div class="price-value">300 €</div>
+                </li>
+              </ul>
+
+              <div class="pricing-foot">
+                <p class="pricing-note mb-0">
+                  <i class="bi bi-info-circle me-1"></i>
+                  Preise pro Person inkl. Platzgebühr.
+                </p>
+                <a class="btn-getstarted"
+                  href="https://wa.me/+491794241063?text=Hallo%20Mehdi%2C%0A%0Aich%20habe%20Interesse%20am%20Tennistraining%20im%20Sommer%202026.%0A%0ASpielniveau%3A%20Ich%20spiele%20Tennis%20seit%0A-%3E%20___%20Jahren%0A%0Agew%C3%BCnschte%20Trainingsform%3A%20(Gruppentraining%20oder%20individuelles%20Training)%3F%0A-%3E%20%0A%0AZeitliche%20Verf%C3%BCgbarkeit%3A%20Wochentage%20und%20Uhrzeiten?%20(bitte%20alle%20m%C3%B6glichen%20Zeiten%20angeben)%0A-%3E%20%0A%0AIch%20freue%20mich%20auf%20Deine%20R%C3%BCckmeldung!%0A%0AViele%20Gr%C3%BC%C3%9Fe"
+                  target="_blank">
+                  <i class="fab fa-whatsapp"></i> Anfragen
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- /PRICING SECTION -->
+
   </main>
 
   <footer id="footer" class="footer">
-
-    
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Strategy</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
+    <div class="container text-center mt-4">
+      <p class="mb-1">© <span>Copyright</span> <strong class="px-1 sitename">Strategy</strong> <span>All Rights Reserved</span></p>
+      <div class="credits mb-0">
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a>
       </div>
     </div>
-
   </footer>
 
   <!-- Scroll Top -->
@@ -240,6 +404,60 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const scrollWrap = document.querySelector(".service-tabs-scroll");
+      if (!scrollWrap) return;
+
+      const tabs = Array.from(scrollWrap.querySelectorAll("#serviceTab .nav-link"));
+      const prevBtn = document.querySelector(".course-scroll-prev");
+      const nextBtn = document.querySelector(".course-scroll-next");
+
+      if (tabs.length === 0) return;
+
+      const isMobile = () => window.matchMedia("(max-width: 767.98px)").matches;
+
+      const activeIndex = () => {
+        const idx = tabs.findIndex(t => t.classList.contains("active"));
+        return idx >= 0 ? idx : 0;
+      };
+
+      const scrollToTab = (idx) => {
+        const el = tabs[idx];
+        if (!el) return;
+        // "nearest" is more stable on mobile than "center"
+        el.scrollIntoView({ behavior: "smooth", inline: "nearest", block: "nearest" });
+      };
+
+      prevBtn?.addEventListener("click", () => {
+        if (!isMobile()) return;
+
+        const idx = activeIndex();
+        const nextIdx = (idx - 1 + tabs.length) % tabs.length; // wrap to last
+
+        tabs[nextIdx].click();
+        scrollToTab(nextIdx);
+      });
+
+      nextBtn?.addEventListener("click", () => {
+        if (!isMobile()) return;
+
+        const idx = activeIndex();
+        const nextIdx = (idx + 1) % tabs.length; // wrap to first
+
+        tabs[nextIdx].click();
+        scrollToTab(nextIdx);
+      });
+
+      // When user taps a tab, keep it visible on mobile
+      tabs.forEach((tab, idx) => {
+        tab.addEventListener("shown.bs.tab", () => {
+          if (!isMobile()) return;
+          scrollToTab(idx);
+        });
+      });
+    });
+  </script>
 
 </body>
 

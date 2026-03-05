@@ -3987,6 +3987,66 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Clickable WhatsApp Icon Button (Step Section)
+#--------------------------------------------------------------*/
+
+.whatsapp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #128C7E; /* official WhatsApp dark green */
+  color: #ffffff;
+  font-size: 26px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.whatsapp-btn:hover {
+  background: #25D366; /* WhatsApp primary green */
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  color: #ffffff;
+}
+
+
+/*--------------------------------------------------------------
+# Steps Section - Button Spacing
+--------------------------------------------------------------*/
+
+.step-info .step-btn {
+  margin-top: 20px;   /* increase space between text and button */
+  display: inline-block;
+}
+
+/*--------------------------------------------------------------
+# Pricing CTA Button (same style as navbar "Sommertraining")
+--------------------------------------------------------------*/
+.btn-getstarted.btn-pill,
+.btn-getstarted.btn-pill:focus {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 50px;
+  transition: 0.3s;
+
+  /* small usability improvements */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0; /* IMPORTANT: navbar has margin-left, we don't want that here */
+}
+
+.btn-getstarted.btn-pill:hover,
+.btn-getstarted.btn-pill:focus:hover {
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+
+/*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------
 

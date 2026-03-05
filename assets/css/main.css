@@ -3988,7 +3988,7 @@ section,
 
 /*--------------------------------------------------------------
 # Clickable WhatsApp Icon Button (Step Section)
-#--------------------------------------------------------------*/
+--------------------------------------------------------------*/
 
 .whatsapp-btn {
   display: flex;
@@ -3997,18 +3997,36 @@ section,
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: #128C7E; /* official WhatsApp dark green */
+  background: #128C7E; /* original WhatsApp dark green */
   color: #ffffff;
   font-size: 26px;
   transition: all 0.25s ease;
   cursor: pointer;
+  position: relative;
+
+  /* subtle glow */
+  box-shadow: 0 0 0 rgba(18,140,126,0.6);
+  animation: whatsapp-glow 2.5s infinite;
 }
 
 .whatsapp-btn:hover {
-  background: #25D366; /* WhatsApp primary green */
+  background: #25D366;
   transform: scale(1.08);
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
   color: #ffffff;
+  animation: none; /* stop pulse on hover */
+}
+
+@keyframes whatsapp-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(18,140,126,0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(18,140,126,0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(18,140,126,0);
+  }
 }
 
 
@@ -4022,28 +4040,75 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Pricing CTA Button (same style as navbar "Sommertraining")
+# Pricing CTA Button (same behaviour as CTA button)
 --------------------------------------------------------------*/
-.btn-getstarted.btn-pill,
-.btn-getstarted.btn-pill:focus {
-  color: var(--contrast-color);
-  background: var(--accent-color);
+
+.btn-getstarted.btn-pill {
+  color: var(--accent-color);
+  background: transparent;
+  border: 2px solid var(--accent-color);
   font-size: 14px;
   padding: 8px 20px;
   border-radius: 50px;
   transition: 0.3s;
 
-  /* small usability improvements */
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin: 0; /* IMPORTANT: navbar has margin-left, we don't want that here */
+  margin: 0;
 }
 
-.btn-getstarted.btn-pill:hover,
-.btn-getstarted.btn-pill:focus:hover {
+.btn-getstarted.btn-pill:hover {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+# Global Get Started Button Hover (enable outside header)
+--------------------------------------------------------------*/
+
+.btn-getstarted:hover,
+.btn-getstarted:focus:hover {
   color: var(--contrast-color);
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+/*--------------------------------------------------------------
+# Contact Info Links: clickable: just underline on hover, no coloring
+--------------------------------------------------------------*/
+
+.contact-info-box a,
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-info-box a:hover ,
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
+# WhatsApp contact hint
+--------------------------------------------------------------*/
+
+.whatsapp-hint {
+  display: block;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+/*--------------------------------------------------------------
+# no orange links on Datenschutz page
+--------------------------------------------------------------*/
+
+/* Datenschutz: Links nicht orange einfärben */
+body.datenschutz-page .description a,
+body.datenschutz-page .description a:visited,
+body.datenschutz-page .description a:hover,
+body.datenschutz-page .description a:focus,
+body.datenschutz-page .description a:active {
+  color: inherit !important;
+  text-decoration: underline; /* optional: keep links recognizable */
 }
 
 /*--------------------------------------------------------------

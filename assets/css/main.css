@@ -4072,18 +4072,20 @@ section,
   color: var(--contrast-color);
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
+
 /*--------------------------------------------------------------
-# Contact Info Links: clickable: just underline on hover, no coloring
+# Contact Info Links: clickable: underline on hover, no coloring
+# (exclude BootstrapMade / DevTools credits)
 --------------------------------------------------------------*/
 
 .contact-info-box a,
-.footer a {
+.footer a /*:not(.credits a) */{
   color: inherit;
   text-decoration: none;
 }
 
-.contact-info-box a:hover ,
-.footer a:hover {
+.contact-info-box a:hover,
+.footer a /*:not(.credits a):hover */{
   text-decoration: underline;
 }
 

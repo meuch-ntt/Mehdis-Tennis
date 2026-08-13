@@ -741,6 +741,10 @@ section,
   overflow: clip;
 }
 
+main > section:first-of-type {
+  padding-top: 100px;
+}
+
 @media (max-width: 1199px) {
 
   section,
@@ -809,6 +813,10 @@ section,
   bottom: 0;
   background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.02) 0px, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 10px);
   z-index: 1;
+}
+
+.hero .section-title {
+  margin-top: 0;
 }
 
 .hero .container,
@@ -1089,15 +1097,48 @@ section,
   }
 }
 
-.about .about-content h2 {
-  font-size: 2.2rem;
-  margin-bottom: 1.25rem;
+.about .about-intro {
+  min-height: 2.25rem;
+}
+
+.about .section-title {
+  padding-bottom: 30px;
+  margin-top: 2rem;
+}
+
+.about .about-intro {
+  margin-top: 1.75rem;
+}
+
+.about .about-intro blockquote {
+  position: relative;
+  font-size: 1.6rem;
   font-weight: 700;
+  font-style: italic;
+  line-height: 1.4;
+  margin: 0;
+  padding-left: 1.25rem;
+  border-left: 4px solid var(--accent-color);
+  color: var(--heading-color);
+}
+
+.about .about-intro blockquote::before {
+  content: "\201C";
+  margin-right: 0.15rem;
+  color: var(--accent-color);
+  font-style: normal;
+}
+
+.about .about-intro blockquote::after {
+  content: "\201D";
+  margin-left: 0.1rem;
+  color: var(--accent-color);
+  font-style: normal;
 }
 
 @media (max-width: 768px) {
-  .about .about-content h2 {
-    font-size: 1.8rem;
+  .about .about-intro blockquote {
+    font-size: 1.4rem;
   }
 }
 
@@ -1157,26 +1198,16 @@ section,
   border-color: color-mix(in srgb, var(--accent-color), black 10%);
 }
 
-.about .testimonial-section {
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.about .testimonial-section .testimonial-intro h3 {
-  font-size: 1.75rem;
-  margin-bottom: 1.25rem;
-  font-weight: 700;
-}
-
-.about .testimonial-section .testimonial-intro p {
+.feedback .testimonial-section .testimonial-intro p {
   margin-bottom: 1.5rem;
 }
 
-.about .testimonial-section .testimonial-intro .swiper-nav-buttons {
+.feedback .testimonial-section .testimonial-intro .swiper-nav-buttons {
   display: flex;
   gap: 10px;
 }
 
-.about .testimonial-section .testimonial-intro .swiper-nav-buttons button {
+.feedback .testimonial-section .testimonial-intro .swiper-nav-buttons button {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -1189,35 +1220,35 @@ section,
   transition: all 0.3s ease;
 }
 
-.about .testimonial-section .testimonial-intro .swiper-nav-buttons button:hover {
+.feedback .testimonial-section .testimonial-intro .swiper-nav-buttons button:hover {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
   color: var(--contrast-color);
 }
 
-.about .testimonial-section .testimonial-intro .swiper-nav-buttons button i {
+.feedback .testimonial-section .testimonial-intro .swiper-nav-buttons button i {
   font-size: 1.25rem;
 }
 
-.about .testimonial-section .testimonial-slider {
+.feedback .testimonial-section .testimonial-slider {
   overflow: hidden;
 }
 
-.about .testimonial-section .testimonial-slider .swiper-wrapper {
+.feedback .testimonial-section .testimonial-slider .swiper-wrapper {
   height: auto !important;
 }
 
 /* Equal height setup */
-.about .testimonial-section .swiper-wrapper {
+.feedback .testimonial-section .swiper-wrapper {
   align-items: stretch;
 }
 
-.about .testimonial-section .swiper-slide {
+.feedback .testimonial-section .swiper-slide {
   display: flex;
   height: auto;
 }
 
-.about .testimonial-section .testimonial-item {
+.feedback .testimonial-section .testimonial-item {
   background-color: var(--surface-color);
   border-radius: 10px;
   padding: 1.5rem; /* reduced from 2rem */
@@ -1231,19 +1262,19 @@ section,
   min-height: 220px; /* reduced from 260px */
 }
 
-.about .testimonial-section .testimonial-item .rating {
+.feedback .testimonial-section .testimonial-item .rating {
   color: #ffc107;
   font-size: 1rem;
 }
 
-.about .testimonial-section .testimonial-item p {
+.feedback .testimonial-section .testimonial-item p {
   font-style: italic;
   font-size: 0.95rem; /* slightly smaller */
   line-height: 1.5;
   margin: 0.75rem 0;
 }
 
-.about .testimonial-section .testimonial-item .client-info .client-img {
+.feedback .testimonial-section .testimonial-item .client-info .client-img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -1251,11 +1282,11 @@ section,
   object-fit: cover;
 }
 
-.about .testimonial-section .testimonial-item .client-info h6 {
+.feedback .testimonial-section .testimonial-item .client-info h6 {
   font-weight: 600;
 }
 
-.about .testimonial-section .testimonial-item .client-info span {
+.feedback .testimonial-section .testimonial-item .client-info span {
   font-size: 0.85rem;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
 }

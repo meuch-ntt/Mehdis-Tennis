@@ -83,11 +83,10 @@
 
   /* ---------- Banner ------------------------------------------------------ */
 
-  // Die Rechtsseiten liegen im Wurzelverzeichnis, /training/ eine Ebene tiefer.
+  // Die Datenschutzerklaerung liegt unter /datenschutz/ - absoluter Pfad,
+  // damit der Link aus jeder Unterseite heraus stimmt.
   function privacyHref() {
-    return window.location.pathname.indexOf("/training/") !== -1
-      ? "../Datenschutz.html"
-      : "Datenschutz.html";
+    return "/datenschutz/";
   }
 
   function removeBanner() {

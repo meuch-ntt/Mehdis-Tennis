@@ -12,12 +12,8 @@
     <link href="assets/img/about/0 Profil-32.png" rel="icon">
     <link href="assets/img/about/0 Profil-180.png" rel="apple-touch-icon">
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap"
-        rel="stylesheet" />
+    <!-- Fonts (lokal gehostet, keine Verbindung zu Google) -->
+    <link href="assets/css/fonts.css" rel="stylesheet" />
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -42,7 +38,7 @@
 
                     <div class="description">
                         <h2 class="mb-3">Impressum</h2>
-                        <p class="mb-4">Angaben gemäß § 5 TMG</p>
+                        <p class="mb-4">Angaben gemäß § 5 DDG</p>
 
                         <p class="mb-4">
                             <strong>Mehdis Tennis&More</strong><br><br>
@@ -57,7 +53,28 @@
                             E-Mail: <a href="mailto:info@mehdi-tennistrainer.de">info@mehdi-tennistrainer.de</a><br><br>
 
                             <strong>Umsatzsteuer</strong><br>
-                            Keine Umsatzsteuernummer aufgrund der Kleinunternehmerregelung laut § 19 UStG.
+                            Keine Umsatzsteuernummer aufgrund der Kleinunternehmerregelung laut § 19 UStG.<br><br>
+
+                            <strong>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</strong><br>
+                            Mehdi Euch, Anschrift wie oben.
+                        </p>
+
+                        <p class="mb-4">
+                            <strong>Verbraucherstreitbeilegung</strong><br>
+                            Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
+                            <a href="https://ec.europa.eu/consumers/odr/" target="_blank"
+                                rel="noopener">https://ec.europa.eu/consumers/odr/</a><br>
+                            Unsere E-Mail-Adresse finden Sie oben. Wir sind nicht verpflichtet und nicht bereit, an
+                            einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+                        </p>
+
+                        <p class="mb-4">
+                            <strong>Haftung für Links</strong><br>
+                            Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen
+                            Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder
+                            Betreiber verantwortlich. Zum Zeitpunkt der Verlinkung waren keine Rechtsverstöße
+                            erkennbar. Bei Bekanntwerden von Rechtsverletzungen entfernen wir derartige Links
+                            umgehend.
                         </p>
                     </div>
 
@@ -65,6 +82,10 @@
                     <div class="cta-button d-flex justify-content-center flex-wrap gap-3">
                         <a href="index.html" class="btn">
                             <span>Startseite</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                        <a href="Datenschutz.html" class="btn">
+                            <span>Datenschutz</span>
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
@@ -108,6 +129,9 @@
 
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
+
+    <!-- Einwilligung: laedt Google Ads erst nach Zustimmung -->
+    <script src="assets/js/consent.js"></script>
 
     <!-- year for copyright footer-->
     <script>

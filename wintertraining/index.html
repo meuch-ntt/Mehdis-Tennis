@@ -195,9 +195,11 @@
         order: -1;
       }
 
+      /* natuerliche Bildhoehe statt fester 200px: das Motiv wird dadurch
+         vollstaendig gezeigt und nicht auf einen Streifen beschnitten */
       .course-media img {
         min-height: 0;
-        height: 200px;
+        height: auto;
       }
 
       .course-body {

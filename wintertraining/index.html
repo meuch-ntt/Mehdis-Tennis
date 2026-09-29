@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Wintertraining 2026/27 - Mehdis Tennistraining</title>
+  <meta name="description"
+    content="Wintertraining 2026/27 bei Mehdis Tennis&More - 20 Trainingseinheiten in der Sport Insel Taufkirchen.">
+  <meta name="keywords" content="Wintertraining, Tennis Taufkirchen, Tenniskurs Winter, Mehdis Tennis">
+
+  <!-- Favicons -->
+  <link href="../assets/img/about/0 Profil-32.png" rel="icon">
+  <link href="../assets/img/about/0 Profil-180.png" rel="apple-touch-icon">
+
+  <!-- Fonts (lokal gehostet, keine Verbindung zu Google) -->
+  <link href="../assets/css/fonts.css" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="../assets/css/main.css" rel="stylesheet">
+
+  <!-- Pricing (simple + modern, fits template) -->
+  <style>
+    .pricing-simple .pricing-card {
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      overflow: hidden;
+    }
+
+    .pricing-simple .pricing-card .pricing-head {
+      padding: 22px 22px 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .pricing-simple .pricing-card .pricing-head h2 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .pricing-simple .pricing-card .pricing-head p {
+      margin: 8px 0 0;
+      opacity: 0.85;
+    }
+
+    .pricing-simple .pricing-list {
+      padding: 6px 22px 18px;
+      margin: 0;
+      list-style: none;
+    }
+
+    .pricing-simple .pricing-list li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .pricing-simple .pricing-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .pricing-simple .price-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+    }
+
+    .pricing-simple .price-value {
+      font-weight: 800;
+      letter-spacing: 0.2px;
+      white-space: nowrap;
+    }
+
+    .pricing-simple .pricing-foot {
+      padding: 0 22px 22px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .pricing-simple .pricing-note {
+      font-size: 0.95rem;
+      opacity: 0.85;
+      margin: 0;
+    }
+
+    @media (max-width: 575.98px) {
+      .pricing-simple .pricing-foot {
+        justify-content: flex-start;
+      }
+    }
+    /* Kurskarten: dauerhaft sichtbar, abwechselnd Bild links/rechts.
+       Gleiche Kartensprache wie die Preisbox oben. */
+    .course-list {
+      display: grid;
+      gap: 22px;
+    }
+
+    .course-card {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      overflow: hidden;
+    }
+
+    /* jede zweite Karte spiegeln - gibt der Liste Rhythmus.
+       Die Spaltenbreiten werden mitgetauscht, damit der Text in beiden
+       Varianten die breitere Spalte bekommt. */
+    .course-card:nth-child(even) {
+      grid-template-columns: 1fr 1.35fr;
+    }
+
+    .course-card:nth-child(even) .course-media {
+      order: -1;
+    }
+
+    .course-body {
+      padding: 26px 28px;
+    }
+
+    .course-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .course-icon {
+      flex: 0 0 auto;
+      width: 40px;
+      height: 40px;
+      border-radius: 11px;
+      display: grid;
+      place-items: center;
+      font-size: 1.15rem;
+      color: var(--accent-color);
+      background: color-mix(in srgb, var(--accent-color), transparent 88%);
+      border: 1px solid color-mix(in srgb, var(--accent-color), transparent 75%);
+    }
+
+    .course-head h3 {
+      margin: 0;
+      font-size: 1.3rem;
+      line-height: 1.3;
+    }
+
+    .course-body p {
+      margin-bottom: 10px;
+    }
+
+    .course-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .course-media img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 220px;
+      object-fit: cover;
+    }
+
+    @media (max-width: 767.98px) {
+
+      /* beide Selektoren noetig: die :nth-child-Regel oben ist spezifischer
+         als ein einzelnes .course-card und wuerde sonst gewinnen */
+      .course-card,
+      .course-card:nth-child(even) {
+        grid-template-columns: 1fr;
+      }
+
+      /* auf schmalen Schirmen immer Bild zuerst, Spiegelung aufheben.
+         Auch hier muss der :nth-child-Selektor mitgenannt werden. */
+      .course-card .course-media,
+      .course-card:nth-child(even) .course-media {
+        order: -1;
+      }
+
+      .course-media img {
+        min-height: 0;
+        height: 200px;
+      }
+
+      .course-body {
+        padding: 22px 20px;
+      }
+    }
+    /* Seiten-Hero: Gruppenfoto als Hintergrund, Text in einer Glasflaeche darueber.
+       Der Verlauf ist unten kraeftig und oben schwach - so bleiben die Gesichter
+       im oberen Bilddrittel sichtbar, waehrend der Text unten sicher lesbar ist. */
+    .page-hero {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      min-height: clamp(560px, 82vh, 780px);
+      padding: 150px 0 50px;
+      background-image:
+        linear-gradient(to bottom,
+          rgba(6, 6, 6, 0.42) 0%,
+          rgba(6, 6, 6, 0.14) 26%,
+          rgba(6, 6, 6, 0.34) 58%,
+          rgba(6, 6, 6, 0.68) 100%),
+        url("../assets/img/services/Afterwork-compressed.jpg");
+      background-size: cover;
+      /* Gesichter liegen im oberen Bilddrittel - Ausschnitt entsprechend gesetzt */
+      background-position: center 26%;
+      background-repeat: no-repeat;
+    }
+
+    .hero-panel {
+      max-width: 720px;
+      /* mittig statt linksbuendig */
+      margin-inline: auto;
+      padding: 26px 30px 28px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      /* sehr transparent, damit das Foto klar durchscheint; der Blur ist
+         bewusst minimal - die Lesbarkeit traegt jetzt vor allem der Textschatten */
+      background: rgba(10, 12, 14, 0.18);
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.30);
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9), 0 2px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .page-hero h1 {
+      font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+      line-height: 1.15;
+      margin: 0 0 20px;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+    }
+
+    .hero-facts {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 11px;
+    }
+
+    .hero-facts li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      line-height: 1.5;
+    }
+
+    .hero-facts i {
+      flex: 0 0 auto;
+      width: 30px;
+      height: 30px;
+      border-radius: 9px;
+      display: grid;
+      place-items: center;
+      font-size: 0.95rem;
+      color: var(--accent-color);
+      background: color-mix(in srgb, var(--accent-color), transparent 86%);
+      border: 1px solid color-mix(in srgb, var(--accent-color), transparent 76%);
+    }
+
+    @media (max-width: 991.98px) {
+      .page-hero {
+        min-height: clamp(480px, 72vh, 640px);
+        padding: 120px 0 40px;
+        background-position: center 28%;
+      }
+
+      .hero-panel {
+        max-width: none;
+        padding: 22px 20px 24px;
+      }
+
+      .hero-facts {
+        gap: 10px;
+      }
+    }
+
+  </style>
+
+  <!-- Google Ads (gtag.js) wird NICHT hier eingebunden, sondern erst nach
+       erteilter Einwilligung von assets/js/consent.js nachgeladen. -->
+
+</head>
+
+<body class="service-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div
+      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
+        <h1 class="sitename">Mehdis Tennis</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#service-details">Kurse</a></li>
+          <li><a href="#pricing">Preise</a></li>
+          <li><a href="#anmeldung">Anmeldung</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted"
+        href="https://www.sportision.de/club/mehdis-tennis-2" target="_blank" rel="noopener">
+        <i class="bi bi-pencil-square"></i> Jetzt anmelden
+      </a>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Hero -->
+    <section class="page-hero dark-background">
+      <div class="container">
+        <div class="hero-panel" data-aos="fade-up">
+          <h1>Anmeldung für Wintertraining 2026/27</h1>
+          <ul class="hero-facts">
+            <li>
+              <i class="bi bi-calendar-event"></i>
+              <span><strong>Zeitraum:</strong> 26.10.2026 bis 31.03.2026</span>
+            </li>
+            <li>
+              <i class="bi bi-alarm"></i>
+              <span><strong>Anmeldeschluss:</strong> 04.10.2026</span>
+            </li>
+            <li>
+              <i class="bi bi-clock"></i>
+              <span><strong>Umfang:</strong> 20 Trainingseinheiten à 60 Minuten (wöchentlich)</span>
+            </li>
+            <li>
+              <i class="bi bi-geo-alt"></i>
+              <span><strong>Trainingsort:</strong> Sport Insel Taufkirchen, Birkenstraße 169, 82024 Taufkirchen</span>
+            </li>
+            <!--
+            <li>
+              <i class="bi bi-gift"></i>
+              <span><strong>Kein Training:</strong> 24.12.2026 bis 06.01.2027 (Weihnachtsferien)</span>
+            </li>
+            -->
+          </ul>
+        </div>
+      </div>
+    </section><!-- End Page Hero -->
+
+    <!-- Service Details Section -->
+    <section id="service-details" class="service-details section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- ROW 1: Kurse und wichtige Informationen (Full Width) -->
+        <div class="row gy-5">
+          <div class="col-12">
+            <div class="service-main-content">
+              <div class="service-header" data-aos="fade-up">
+                <h1>Kurse und wichtige Informationen</h1>
+                <div class="service-meta">
+                  <span> 🎾 Alle Levels</span>
+                  <span><i class="bi bi-person me-1"></i> Einzel</span>
+                  <span><i class="bi bi-people me-1"></i> Gruppe (max. 4)</span>
+                  <span><i class="bi bi-calendar-check me-1"></i> Flexibel</span>
+                </div>
+                <p class="lead">
+                  Wir bieten moderne Trainingskurse für alle Altersgruppen und Spielstärken – vom Einsteigerkurs bis zum
+                  intensiven Trainingsprogramm für ambitionierte Spieler.
+                  <br>Sowohl Einzeltraining als auch Gruppentraining sind möglich.
+                  Um eine hohe Trainingsqualität zu gewährleisten, ist die Gruppengröße auf maximal vier Teilnehmer
+                  begrenzt.
+                  Ein Kurs umfasst zwanzig Trainingseinheiten von jeweils 60 Minuten. Die Trainingszeiten werden als
+                  wöchentliche feste
+                  Regeltermine vereinbart (gleicher Wochentag / gleiche Uhrzeit).
+                  Je nach Zielsetzung kann das Training auch mehrmals pro Woche stattfinden. In diesem Fall müssen
+                  mehrere Kurse gebucht werden.
+                  <br> <br>
+                  Trainingsort ist die Sport Insel Taufkirchen, Birkenstraße 169, 82024 Taufkirchen.
+                  <br>
+                  Das Training beginnt in der Woche ab dem 26.10.2026 und findet wöchentlich statt. In den
+                  Weihnachtsferien vom 24.12.2026 bis 06.01.2026 findet kein Training statt.
+                  An gesetzlichen Feiertagen findet regulär Training statt, sofern die Tennisschule nichts anderes
+
+                  <br> <br>
+                  Die Einteilung erfolgt nach dem Meldeschluss. Die Trainingszeiten werden anschließend bestätigt und
+                  bekanntgegeben.
+                  <br>
+                  Nachmeldungen kommen auf die Warteliste und werden berücksichtigt, sobald freie Plätze verfügbar sind.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /ROW 1 -->
+
+        <!-- ROW 2: Kurse untereinander -->
+        <div class="row gy-5">
+          <div class="col-12">
+            <div class="course-list">
+
+
+              <article class="course-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="course-body">
+                  <div class="course-head">
+                    <span class="course-icon"><i class="bi bi-sunset"></i></span>
+                    <h3>Afterwork Tennis Winter 2026/27</h3>
+                  </div>
+                  <p>Afterwork-Tennis ist der perfekte Ausgleich nach dem Arbeitstag und bietet dir gleichzeitig die Möglichkeit, dein Spiel gezielt weiterzuentwickeln.</p>
+                  <p>In lockerer und motivierender Atmosphäre verbinden wir Techniktraining, praxisnahe Spielformen und Konditionstraining zu einem abwechslungsreichen Training.</p>
+                </div>
+                <div class="course-media">
+                  <img src="../assets/img/services/0 Afterwork.jpg" alt="Afterwork Tennis" loading="lazy">
+                </div>
+              </article>
+
+              <article class="course-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="course-body">
+                  <div class="course-head">
+                    <span class="course-icon"><i class="bi bi-trophy"></i></span>
+                    <h3>Kinder- und Jugendkurs Winter 2026/27</h3>
+                  </div>
+                  <p>Im Kinder- und Jugendkurs steht die ganzheitliche Entwicklung im Mittelpunkt. Neben Technik und Taktik trainieren wir gezielt Koordination und Motorik – die entscheidenden Bausteine für eine nachhaltige sportliche Entwicklung.</p>
+                  <p>Durch abwechslungsreiche Übungs- und Spielformen erzielen die Kinder und Jugendlichen kontinuierliche Fortschritte – verbunden mit jeder Menge Freude auf dem Platz.</p>
+                </div>
+                <div class="course-media">
+                  <img src="../assets/img/services/0 Kinder.jpg" alt="Kinder- und Jugendkurs" loading="lazy">
+                </div>
+              </article>
+
+              <article class="course-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="course-body">
+                  <div class="course-head">
+                    <span class="course-icon"><i class="bi bi-person"></i></span>
+                    <h3>Einzel- und Gruppenkurse Erwachsene Winter 2026/27</h3>
+                  </div>
+                  <p>Ob Anfänger, Wiedereinsteiger oder ambitionierter Spieler – unsere Kurse bieten dir die Möglichkeit, dein Können gezielt zu verbessern.</p>
+                  <p>Durch spielnahe Übungen und Matchsituationen entwickelst du kontinuierlich Technik, Taktik und Beweglichkeit weiter – kombiniert mit echter Spielfreude.</p>
+                </div>
+                <div class="course-media">
+                  <img src="../assets/img/services/0 Erwachsene.jpg" alt="Erwachsenenkurse" loading="lazy">
+                </div>
+              </article>
+
+              <article class="course-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="course-body">
+                  <div class="course-head">
+                    <span class="course-icon"><i class="bi bi-lightning-charge"></i></span>
+                    <h3>Fast-Learning Winter 2026/27</h3>
+                  </div>
+                  <p>Der ideale Einstieg für Anfänger. Schritt für Schritt vermitteln wir alle grundlegenden Schlagtechniken – praxisnah und direkt im Spiel für maximalen Fortschritt sowie Spielfreude auf dem Platz.</p>
+                  <p>Bereits nach der 2. Stunde bekommst du ein Gefühl für Vorhand und Rückhand – nach der 5. Stunde bist du mit Volley sowie Aufschlag vertraut. Nach 10 Stunden kannst du Tennis auf normaler Platzgröße spielen.</p>
+                </div>
+                <div class="course-media">
+                  <img src="../assets/img/services/0 Fast Learning.jpg" alt="Fast-Learning" loading="lazy">
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <!-- /ROW 2 -->
+
+      </div>
+    </section>
+
+    <!-- PRICING SECTION (LAST SECTION IN MAIN) -->
+    <section id="pricing" class="section pricing-simple">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Preise</h2>
+        <div><span>Wintertraining 2026/27</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+
+            <div class="pricing-card">
+              <div class="pricing-head">
+                <h2>Preise</h2>
+                <p>Wintertraining 2026/27 · 20 Trainingseinheiten à 60 Minuten · wöchentlich</p>
+              </div>
+
+              <ul class="pricing-list">
+
+                <li>
+                  <div class="price-label">
+                    <i class="bi bi-people-fill me-1"></i>
+                    <span>Gruppenkurs</span>
+                  </div>
+                  <div class="price-value">700 €</div>
+                </li>
+
+                <li>
+                  <div class="price-label">
+                    <i class="bi bi-people me-1"></i>
+                    <span>Partnerkurs (2er-Gruppe)</span>
+                  </div>
+                  <div class="price-value">900 €</div>
+                </li>
+
+                <li>
+                  <div class="price-label">
+                    <i class="bi bi-person me-1"></i>
+                    <span>Einzelkurs</span>
+                  </div>
+                  <div class="price-value">1.600 €</div>
+                </li>
+
+              </ul>
+
+              <div class="pricing-foot">
+                <p class="pricing-note mb-0">
+                  <i class="bi bi-info-circle me-1"></i>
+                  Preise pro Person für zwanzig Einheiten. Enthalten sind Trainerhonorar, Material und Platzmiete.
+                </p>
+
+
+                <a class="registration-btn btn-getstarted btn-pill"
+                  href="https://www.sportision.de/club/mehdis-tennis-2" target="_blank" rel="noopener">
+                  <i class="bi bi-pencil-square me-2"></i> <span>Jetzt anmelden</span>
+                </a>
+
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- /PRICING SECTION -->
+
+    <section id="anmeldung" class="section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Anmeldung</h2>
+        <div><span>Wintertraining 2026/27</span></div>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="pricing-card text-center p-4 p-md-5">
+          <h3 class="mb-3">Jetzt verbindlich anmelden</h3>
+          <p class="mb-4">
+            Die Anmeldung für das Wintertraining 2026/27 erfolgt über unsere Buchungsplattform Sportision.
+            Dort kannst du deine Kontaktdaten, Spielstärke und zeitliche Verfügbarkeit angeben.
+          </p>
+
+          <a class="registration-btn btn-getstarted btn-pill"
+            href="https://www.sportision.de/club/mehdis-tennis-2" target="_blank" rel="noopener">
+            <i class="bi bi-pencil-square me-2"></i> <span>Jetzt anmelden</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Kontakt</h2>
+        <div><span>So erreichst du uns:</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Contact Info Boxes -->
+        <div class="row gy-4 mb-5">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="contact-info-box">
+              <div class="icon-box">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div class="info-content">
+                <h4>Email Address</h4>
+                <p>
+                  <a href="mailto:info@mehdi-tennistrainer.de">
+                    info@mehdi-tennistrainer.de
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="contact-info-box">
+              <div class="icon-box">
+                <i class="bi bi-whatsapp"></i>
+              </div>
+              <div class="info-content">
+                <h4>WhatsApp</h4>
+                <p>
+                  <a href="https://wa.me/4915141389691" target="_blank">
+                    +49 151 41389691
+                  </a>
+                </p>
+                <small class="whatsapp-hint">
+                  Antwort meist innerhalb weniger Minuten
+                </small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="contact-info-box">
+              <div class="icon-box">
+                <i class="bi bi-instagram"></i>
+              </div>
+              <div class="info-content">
+                <h4>Instagram</h4>
+                <p>
+                  <a href="https://www.instagram.com/mehdis_tennis/profilecard/?igsh=MWcwcndlMDBweDc4MQ%3D%3D"
+                    target="_blank">
+                    @mehdis_tennis
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container copyright text-center mt-4">
+      <p>
+        © <span id="year"></span>
+        <strong class="px-1 sitename">Mehdis Tennis&More.</strong>
+        <span>All Rights Reserved</span>.
+        <a href="/impressum/">Impressum</a> |
+        <a href="/datenschutz/" target="_blank">Datenschutz</a>
+      </p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a
+          href="https://bootstrapmade.com/tools/">DevTools</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+  <!-- Einwilligung: laedt Google Ads erst nach Zustimmung -->
+  <script src="../assets/js/consent.js"></script>
+
+  <!-- year for copyright footer-->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+
+</body>
+
+</html>

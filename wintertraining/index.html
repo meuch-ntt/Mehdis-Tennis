@@ -104,6 +104,7 @@
         justify-content: flex-start;
       }
     }
+
     /* Kurskarten: dauerhaft sichtbar, abwechselnd Bild links/rechts.
        Gleiche Kartensprache wie die Preisbox oben. */
     .course-list {
@@ -171,6 +172,31 @@
       margin-bottom: 0;
     }
 
+    /* Anmelde-Link je Kurs: bewusst leichter als die grossen Anmelde-Buttons
+       der Seite, damit die Hierarchie erhalten bleibt */
+    .course-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+      padding: 9px 18px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--accent-color);
+      background: color-mix(in srgb, var(--accent-color), transparent 92%);
+      border: 1px solid color-mix(in srgb, var(--accent-color), transparent 58%);
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .course-cta:hover,
+    .course-cta:focus-visible {
+      color: var(--accent-color);
+      background: color-mix(in srgb, var(--accent-color), transparent 82%);
+      border-color: var(--accent-color);
+    }
+
     .course-media img {
       display: block;
       width: 100%;
@@ -206,6 +232,7 @@
         padding: 22px 20px;
       }
     }
+
     /* Seiten-Hero: Gruppenfoto als Hintergrund, Text in einer Glasflaeche darueber.
        Der Verlauf ist unten kraeftig und oben schwach - so bleiben die Gesichter
        im oberen Bilddrittel sichtbar, waehrend der Text unten sicher lesbar ist. */
@@ -221,7 +248,7 @@
           rgba(6, 6, 6, 0.14) 26%,
           rgba(6, 6, 6, 0.34) 58%,
           rgba(6, 6, 6, 0.68) 100%),
-        url("../assets/img/services/Afterwork-compressed.jpg");
+        url("../assets/img/services/Afterwork-c.jpg");
       background-size: cover;
       /* Gesichter liegen im oberen Bilddrittel - Ausschnitt entsprechend gesetzt */
       background-position: center 26%;
@@ -295,7 +322,6 @@
         gap: 10px;
       }
     }
-
   </style>
 
   <!-- Google Ads (gtag.js) wird NICHT hier eingebunden, sondern erst nach
@@ -321,8 +347,7 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted"
-        href="https://www.sportision.de/club/mehdis-tennis-2" target="_blank" rel="noopener">
+      <a class="btn-getstarted" href="https://www.sportision.de/club/mehdis-tennis-2" target="_blank" rel="noopener">
         <i class="bi bi-pencil-square"></i> Jetzt anmelden
       </a>
     </div>
@@ -418,58 +443,150 @@
               <article class="course-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="course-body">
                   <div class="course-head">
-                    <span class="course-icon"><i class="bi bi-sunset"></i></span>
-                    <h3>Afterwork Tennis Winter 2026/27</h3>
+                    <span class="course-icon"><i class="bi bi-bullseye"></i></span>
+                    <h3>Einzelkurs</h3>
                   </div>
-                  <p>Afterwork-Tennis ist der perfekte Ausgleich nach dem Arbeitstag und bietet dir gleichzeitig die Möglichkeit, dein Spiel gezielt weiterzuentwickeln.</p>
-                  <p>In lockerer und motivierender Atmosphäre verbinden wir Techniktraining, praxisnahe Spielformen und Konditionstraining zu einem abwechslungsreichen Training.</p>
+                  <p>Training eins zu eins mit deinem Trainer: Jede Einheit richtet sich ganz nach deinem
+                    Spielniveau, deinem Tempo und deinen Zielen.</p>
+                  <p>Was in der Schlagtechnik noch nicht sitzt, korrigieren wir direkt. Parallel dazu bauen wir
+                    Taktik und Spielverständnis Schritt für Schritt auf. Je nach Voraussetzungen kommen außerdem
+                    Kondition, Koordination und Schnelligkeit dazu.</p>
+                  <p>Ideal für Einsteiger ebenso wie für ambitionierte Spieler, die sich ganzheitlich und
+                    systematisch weiterentwickeln wollen.</p>
+                  <a class="course-cta"
+                    href="https://www.sportision.de/club/mehdis-tennis-2/bookings/wintertraining-20262027-einzel-und-partnerkurse-1"
+                    target="_blank" rel="noopener">
+                    Zum Kurs anmelden <i class="bi bi-arrow-right"></i>
+                  </a>
                 </div>
                 <div class="course-media">
-                  <img src="../assets/img/services/0 Afterwork.jpg" alt="Afterwork Tennis" loading="lazy">
+                  <img src="../assets/img/services/Einzelkurs.jpg" alt="Einzelkurs" loading="lazy">
                 </div>
               </article>
 
               <article class="course-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="course-body">
                   <div class="course-head">
-                    <span class="course-icon"><i class="bi bi-trophy"></i></span>
-                    <h3>Kinder- und Jugendkurs Winter 2026/27</h3>
+                    <span class="course-icon"><i class="bi bi-people"></i></span>
+                    <h3>Partnerkurs</h3>
                   </div>
-                  <p>Im Kinder- und Jugendkurs steht die ganzheitliche Entwicklung im Mittelpunkt. Neben Technik und Taktik trainieren wir gezielt Koordination und Motorik – die entscheidenden Bausteine für eine nachhaltige sportliche Entwicklung.</p>
-                  <p>Durch abwechslungsreiche Übungs- und Spielformen erzielen die Kinder und Jugendlichen kontinuierliche Fortschritte – verbunden mit jeder Menge Freude auf dem Platz.</p>
+                  <p>Im Partnerkurs trainiert ihr zu zweit – als Paar, unter Freunden, im Familienduo oder mit
+                    Kollegen. Die Betreuung bleibt dabei nah und persönlich.</p>
+                  <p>Eure Schlagtechnik trainieren wir gezielt mit individuellen Korrekturen.
+                    Gemeinsam lassen sich Übungen direkt ins Spiel übertragen: Ballwechsel und Matchspiel gehören
+                    von Anfang an dazu. Das hält das Training abwechslungsreich und macht eure Fortschritte
+                    gemeinsam sichtbar. Kondition, Koordination und Schnelligkeit werden dabei mittrainiert.</p>
+                  <p>Umfang und Intensität stimmen wir wie beim Einzelkurs individuell auf euch ab.</p>
+                  <a class="course-cta"
+                    href="https://www.sportision.de/club/mehdis-tennis-2/bookings/wintertraining-20262027-einzel-und-partnerkurse-1"
+                    target="_blank" rel="noopener">
+                    Zum Kurs anmelden <i class="bi bi-arrow-right"></i>
+                  </a>
                 </div>
                 <div class="course-media">
-                  <img src="../assets/img/services/0 Kinder.jpg" alt="Kinder- und Jugendkurs" loading="lazy">
+                  <img src="../assets/img/services/Partnerkurs.jpg" alt="Partnerkurs" loading="lazy">
                 </div>
               </article>
 
-              <article class="course-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="course-body">
-                  <div class="course-head">
-                    <span class="course-icon"><i class="bi bi-person"></i></span>
-                    <h3>Einzel- und Gruppenkurse Erwachsene Winter 2026/27</h3>
-                  </div>
-                  <p>Ob Anfänger, Wiedereinsteiger oder ambitionierter Spieler – unsere Kurse bieten dir die Möglichkeit, dein Können gezielt zu verbessern.</p>
-                  <p>Durch spielnahe Übungen und Matchsituationen entwickelst du kontinuierlich Technik, Taktik und Beweglichkeit weiter – kombiniert mit echter Spielfreude.</p>
-                </div>
-                <div class="course-media">
-                  <img src="../assets/img/services/0 Erwachsene.jpg" alt="Erwachsenenkurse" loading="lazy">
-                </div>
-              </article>
+
 
               <article class="course-card" data-aos="fade-up" data-aos-delay="400">
                 <div class="course-body">
                   <div class="course-head">
-                    <span class="course-icon"><i class="bi bi-lightning-charge"></i></span>
-                    <h3>Fast-Learning Winter 2026/27</h3>
+                    <span class="course-icon"><i class="bi bi-sunset"></i></span>
+                    <h3>Afterwork Tennis</h3>
                   </div>
-                  <p>Der ideale Einstieg für Anfänger. Schritt für Schritt vermitteln wir alle grundlegenden Schlagtechniken – praxisnah und direkt im Spiel für maximalen Fortschritt sowie Spielfreude auf dem Platz.</p>
-                  <p>Bereits nach der 2. Stunde bekommst du ein Gefühl für Vorhand und Rückhand – nach der 5. Stunde bist du mit Volley sowie Aufschlag vertraut. Nach 10 Stunden kannst du Tennis auf normaler Platzgröße spielen.</p>
+                  <p>Afterwork-Tennis ist der perfekte Ausgleich nach dem Arbeitstag – und gleichzeitig die
+                    Chance, dein Spiel gezielt weiterzuentwickeln.</p>
+                  <p>In lockerer und motivierender Atmosphäre verbinden wir Techniktraining, praxisnahe Spielformen
+                    und Kondition zu einer abwechslungsreichen Einheit. Dabei lernst du stetig dazu und verbesserst
+                    dein Können – von der Schlagausführung über taktische Lösungen für Einzel und Doppel bis hin
+                    zu Koordination und Fitness.</p>
+                  <p>Die Einheiten finden am frühen Abend statt und lassen sich gut mit dem Berufsalltag verbinden.
+                    Ideal für Berufstätige – egal ob Einsteiger, Wiedereinsteiger oder erfahrene Spieler.</p>
+                  <a class="course-cta"
+                    href="https://www.sportision.de/club/mehdis-tennis-2/bookings/wintertraining-20262027-gruppentraining-1"
+                    target="_blank" rel="noopener">
+                    Zum Kurs anmelden <i class="bi bi-arrow-right"></i>
+                  </a>
                 </div>
                 <div class="course-media">
-                  <img src="../assets/img/services/0 Fast Learning.jpg" alt="Fast-Learning" loading="lazy">
+                  <img src="../assets/img/services/Afterwork.jpg" alt="Afterwork Tennis" loading="lazy">
                 </div>
               </article>
+
+<article class="course-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="course-body">
+                  <div class="course-head">
+                    <span class="course-icon"><i class="bi bi-person"></i></span>
+                    <h3>Gruppenkurse - Erwachsene</h3>
+                  </div>
+                  <p>In kleinen Gruppen trainiert ihr mit Spielern auf ähnlichem Niveau – so profitiert ihr vom
+                    persönlichen Coaching und der Dynamik im Team.</p>
+                  <p>Im Fokus steht das Taktiktraining: Spielzüge und Strategien setzt ihr direkt in matchnahen
+                    Situationen um. Auch Doppeltraining ist möglich. Je nach Voraussetzungen und Zielen der Gruppe
+                    trainieren wir außerdem Kondition, Koordination und Schnelligkeit.</p>
+                  <p>Die Gruppen stellen wir nach Alter und Spielstärke zusammen – von Einsteigern bis zu
+                    ambitionierten Mannschaftsspielern.</p>
+                  <a class="course-cta"
+                    href="https://www.sportision.de/club/mehdis-tennis-2/bookings/wintertraining-20262027-gruppentraining-1"
+                    target="_blank" rel="noopener">
+                    Zum Kurs anmelden <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+                <div class="course-media">
+                  <img src="../assets/img/services/Gruppenkurs.jpg" alt="Erwachsenenkurse" loading="lazy">
+                </div>
+              </article>
+
+              <article class="course-card" data-aos="fade-up" data-aos-delay="600">
+                <div class="course-body">
+                  <div class="course-head">
+                    <span class="course-icon"><i class="bi bi-lightning-charge"></i></span>
+                    <h3>Fast-Learning</h3>
+                  </div>
+                  <p>Der ideale Einstieg für Anfänger. Schritt für Schritt vermitteln wir alle grundlegenden
+                    Schlagtechniken – praxisnah und direkt im Spiel für maximalen Fortschritt sowie Spielfreude auf dem
+                    Platz.</p>
+                  <p>Wir starten im Kleinfeld, wo du den Ball leichter kontrollieren kannst.
+                    Bereits nach der 2. Stunde bekommst du ein Gefühl für Vorhand und Rückhand.
+                    Nach der 6. Stunde bist du mit Volley sowie Aufschlag vertraut.
+                    Gegen Ende des Kurses arbeiten wir uns zur Grundlinie vor und spielen auf dem ganzen Platz.
+                  </p>
+                  <p>In einer motivierenden Teamdynamik verbesserst du durch gezielte Übungen auch deine
+                    Beweglichkeit und Koordination.</p>
+                  <a class="course-cta"
+                    href="https://www.sportision.de/club/mehdis-tennis-2/bookings/wintertraining-20262027-gruppentraining-1"
+                    target="_blank" rel="noopener">
+                    Zum Kurs anmelden <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+                <div class="course-media">
+                  <img src="../assets/img/services/Fast Learning.jpg" alt="Fast-Learning" loading="lazy">
+                </div>
+              </article>
+
+              <article class="course-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="course-body">
+                  <div class="course-head">
+                    <span class="course-icon"><i class="bi bi-trophy"></i></span>
+                    <h3>Kinder- und Jugendkurs</h3>
+                  </div>
+                  <p>Im Kinder- und Jugendkurs steht die ganzheitliche Entwicklung im Mittelpunkt. Neben Technik und
+                    Taktik trainieren wir gezielt Koordination und Motorik – die entscheidenden Bausteine für eine
+                    nachhaltige sportliche Entwicklung.</p>
+                  <p>Durch abwechslungsreiche Übungs- und Spielformen erzielen die Kinder und Jugendlichen
+                    kontinuierliche Fortschritte – verbunden mit jeder Menge Freude auf dem Platz.</p>
+                  Talentierte Kinder begleiten wir auf ihrem weiteren Weg – ins Vereinsspiel, in die Mannschaft oder in
+                  Richtung Leistungssport.
+                  <P>
+                </div>
+                <div class="course-media">
+                  <img src="../assets/img/services/Kinder.jpg" alt="Kinder- und Jugendkurs" loading="lazy">
+                </div>
+              </article>
+
+          
             </div>
           </div>
         </div>
@@ -559,12 +676,12 @@
         <div class="pricing-card text-center p-4 p-md-5">
           <h3 class="mb-3">Jetzt verbindlich anmelden</h3>
           <p class="mb-4">
-            Die Anmeldung für das Wintertraining 2026/27 erfolgt über unsere Buchungsplattform Sportision.
+            Die Anmeldung für das Wintertraining 2026/27 erfolgt über die Buchungsplattform Sportision.
             Dort kannst du deine Kontaktdaten, Spielstärke und zeitliche Verfügbarkeit angeben.
           </p>
 
-          <a class="registration-btn btn-getstarted btn-pill"
-            href="https://www.sportision.de/club/mehdis-tennis-2" target="_blank" rel="noopener">
+          <a class="registration-btn btn-getstarted btn-pill" href="https://www.sportision.de/club/mehdis-tennis-2"
+            target="_blank" rel="noopener">
             <i class="bi bi-pencil-square me-2"></i> <span>Jetzt anmelden</span>
           </a>
 
